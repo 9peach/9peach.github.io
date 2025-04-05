@@ -1,28 +1,100 @@
-<style>
-    button{
-        color:white;
-        border-radius:15px;
-        background-color:black;
-        height:25px;
-        width:150;
-        cursor:pointer;
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>學習歷程 實體影片</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", sans-serif;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #333;
     }
 
-    button:hover{
-        background-color: rgb(47, 47, 47);
+    h1 {
+      text-align: center;
+      padding: 40px 0 10px;
+      font-size: 2.5em;
+      color: #2c3e50;
     }
 
-    button:active{
-        background-color: rgb(70,70,70);
+    .video-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 50px;
+      padding: 0 20px;
     }
 
-</style>
+    .video-block {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 420px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-<!-- h標籤 用來製作標題 數字可以從1到6 6的字體最小 -->
-<h1>全新的網頁!</h1> 
-<!-- hr標籤 用來換行 因為標籤中間不用寫字 可省略為<hr/> -->
-<hr/>
-<!-- p標籤 用作內文 br標籤 換行用 -->
-<P>這是一個高中生做的網頁!</P> <br\> <p>好ㄟ</p>
-<!-- button標籤 顧名思義就是按鈕 -->
-<button>punch me</button>
+    .video-block:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-block h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    .video-block iframe {
+      width: 100%;
+      height: 240px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .video-block {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>學習歷程 實體影片</h1>
+
+  <!-- 第一排 -->
+  <div class="video-row">
+    <div class="video-block">
+      <h3>戰鬥音樂1</h3>
+      <iframe src="https://www.youtube.com/embed/LCwHYR47G0I?si=YYYOdH1DzdO05L9u" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-block">
+      <h3>戰鬥音樂2</h3>
+      <iframe src="https://www.youtube.com/embed/HffhB0zgdlQ?si=LXRIfjF-2fE7IXqo" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-block">
+      <h3>勝利及結算畫面</h3>
+      <iframe src="https://www.youtube.com/embed/V-f9habuFoA?si=y3lfn4stdCtrG-vO" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- 第二排 -->
+  <div class="video-row">
+    <div class="video-block">
+      <h3>角色及地圖選擇頁面</h3>
+      <iframe src="https://www.youtube.com/embed/mMmMG1rtVD4?si=Kd9M3wMVw5dJ1n9f" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-block">
+      <h3>彩蛋音樂</h3>
+      <iframe src="https://www.youtube.com/embed/DV9Km_lrJAQ?si=IZUSsybCbjt1_yQv" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</body>
+</html>
